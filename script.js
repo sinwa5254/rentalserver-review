@@ -101,7 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* === スムーズスクロール（TOCリンク対応） === */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
-      const target = document.querySelector(link.getAttribute('href'));
+      const href = link.getAttribute('href');
+      if (href === '#') return; // CTAボタン等はスキップ
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         const offset = 80; // ヘッダー高さ
