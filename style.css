@@ -106,15 +106,9 @@ ul { list-style: none; }
 .logo-icon {
   width: 36px;
   height: 36px;
-  background: var(--teal);
   border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 900;
-  color: var(--navy);
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .logo-text {
