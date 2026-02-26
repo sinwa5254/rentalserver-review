@@ -1054,9 +1054,11 @@ ul { list-style: none; }
 .plan-table th {
   background: var(--navy);
   color: var(--white);
-  padding: 12px 16px;
+  padding: 12px 14px;
   text-align: left;
   font-weight: 700;
+  font-size: 12.5px;
+  white-space: nowrap;
 }
 
 .plan-table td {
