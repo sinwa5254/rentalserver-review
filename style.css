@@ -42,6 +42,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -50,10 +51,15 @@ body {
   color: var(--gray-900);
   line-height: 1.7;
   min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img, table, video {
+  max-width: 100%;
 }
 
 img {
-  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -1365,6 +1371,16 @@ ul { list-style: none; }
 
   .feature-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cta-btn {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  .btn-lg {
+    padding: 14px 20px;
+    font-size: 15px;
   }
 }
 
