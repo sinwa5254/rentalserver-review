@@ -1217,13 +1217,15 @@ ul { list-style: none; }
 
 /* === アラートボックス === */
 .alert {
-  display: flex;
-  gap: 12px;
   padding: 16px 20px;
   border-radius: var(--radius-sm);
   font-size: 13.5px;
   line-height: 1.7;
   margin: 16px 0;
+}
+
+.alert strong {
+  white-space: nowrap;
 }
 
 .alert-info {
