@@ -641,6 +641,7 @@ ul { list-style: none; }
   padding: 14px 16px;
   border-bottom: 1px solid var(--gray-200);
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 .compare-table tr:last-child td { border-bottom: none; }
