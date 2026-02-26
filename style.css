@@ -1005,6 +1005,7 @@ ul { list-style: none; }
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, rgba(0,194,168,0.1), transparent 70%);
+  pointer-events: none;
 }
 
 .cta-banner h2 {
