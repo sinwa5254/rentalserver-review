@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
-      if (href === '#') return; // CTAボタン等はスキップ
+      if (href === '#' || href.startsWith('#contact')) return; // CTAボタン等はスキップ
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
