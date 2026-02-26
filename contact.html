@@ -110,14 +110,20 @@
 </footer>
 <script src="script.js"></script>
 <script>
-document.getElementById('contact-link').addEventListener('click', function(e) {
-  e.preventDefault();
-  var mail = this.getAttribute('data-mail');
-  var domain = this.getAttribute('data-domain');
-  var subject = encodeURIComponent('【レンタルサーバーレビュー】お問い合わせ');
-  var body = encodeURIComponent('お名前：\nお問い合わせ内容：\n');
-  window.location.href = 'mailto:' + mail + '@' + domain + '?subject=' + subject + '&body=' + body;
-});
+(function() {
+  var link = document.getElementById('contact-link');
+  function openMail(e) {
+    e.preventDefault();
+    var mail = link.getAttribute('data-mail');
+    var domain = link.getAttribute('data-domain');
+    var subject = encodeURIComponent('【レンタルサーバーレビュー】お問い合わせ');
+    var body = encodeURIComponent('お名前：\nお問い合わせ内容：\n');
+    window.location.href = 'mailto:' + mail + '@' + domain + '?subject=' + subject + '&body=' + body;
+  }
+  link.addEventListener('click', openMail);
+  link.addEventListener('touchend', openMail);
+  link.style.touchAction = 'manipulation';
+})();
 </script>
 </body>
 </html>
