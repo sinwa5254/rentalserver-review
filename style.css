@@ -1044,6 +1044,19 @@ ul { list-style: none; }
 
 .info-card p { font-size: 14px; line-height: 1.85; color: var(--gray-700); }
 
+/* === テーブルラッパー === */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.table-wrapper table {
+  min-width: 500px;
+  width: 100%;
+  white-space: nowrap;
+}
+
 /* === 料金プランテーブル === */
 .plan-table {
   width: 100%;
