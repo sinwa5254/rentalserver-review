@@ -53,6 +53,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 img, table, video {
@@ -747,6 +749,7 @@ ul { list-style: none; }
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
   color: var(--white);
   padding: 56px 0 48px;
+  overflow: hidden;
 }
 
 .breadcrumb {
@@ -829,11 +832,15 @@ ul { list-style: none; }
   align-items: start;
 }
 
-.review-main { }
+.review-main {
+  min-width: 0;
+  overflow: hidden;
+}
 
 .review-sidebar {
   position: sticky;
   top: 80px;
+  min-width: 0;
 }
 
 .sidebar-box {
@@ -1025,6 +1032,7 @@ ul { list-style: none; }
   box-shadow: var(--shadow-sm);
   padding: 28px;
   margin-bottom: 24px;
+  overflow: hidden;
 }
 
 .info-card h2 {
@@ -1357,6 +1365,10 @@ ul { list-style: none; }
   }
 
   .compare-table { font-size: 12.5px; }
+
+  .info-card { padding: 20px; }
+  .recommend-box { padding: 20px; }
+  .toc-box { padding: 16px 20px; }
 }
 
 @media (max-width: 480px) {
@@ -1382,6 +1394,11 @@ ul { list-style: none; }
     padding: 14px 20px;
     font-size: 15px;
   }
+
+  .info-card { padding: 16px; }
+  .recommend-box { padding: 16px; }
+  .sidebar-box { padding: 16px; }
+  .pros-box, .cons-box { padding: 16px; }
 }
 
 /* === スクロールバー === */
